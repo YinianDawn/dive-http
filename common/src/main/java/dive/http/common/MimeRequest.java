@@ -149,6 +149,7 @@ public class MimeRequest {
         /**
          * 设置url
          * @param url url
+         * @return Builder
          */
         public Builder url(String url) {
             this.url = url;
@@ -158,6 +159,7 @@ public class MimeRequest {
         /**
          * 设置url中的待替换变量
          * @param variable 变量值
+         * @return Builder
          */
         public Builder replace(Object variable) {
             if (null == replace) {
@@ -171,6 +173,7 @@ public class MimeRequest {
          * 设置url中的待替换变量
          * @param name 变量名
          * @param variable 变量值
+         * @return Builder
          */
         public Builder replace(String name, Object variable) {
             if (null == replace) {
@@ -183,6 +186,7 @@ public class MimeRequest {
         /**
          * 设置请求方法
          * @param method 请求方法
+         * @return Builder
          */
         public Builder method(Method method) {
             if (null == method) {
@@ -200,6 +204,7 @@ public class MimeRequest {
 
         /**
          * 设置为get请求
+         * @return Builder
          */
         public Builder get() {
             return method(Method.GET);
@@ -207,6 +212,7 @@ public class MimeRequest {
 
         /**
          * 设置为post请求
+         * @return Builder
          */
         public Builder post() {
             //post请求必须有请求体
@@ -218,6 +224,7 @@ public class MimeRequest {
 
         /**
          * 设置为put请求
+         * @return Builder
          */
         public Builder put() {
             return method(Method.PUT);
@@ -225,6 +232,7 @@ public class MimeRequest {
 
         /**
          * 设置为delete请求
+         * @return Builder
          */
         public Builder delete() {
             return method(Method.DELETE);
@@ -234,6 +242,7 @@ public class MimeRequest {
          * 设置header
          * @param key 键
          * @param value 值
+         * @return Builder
          */
         public Builder header(String key, String value) {
             if (null == header) {
@@ -246,6 +255,7 @@ public class MimeRequest {
         /**
          * 设置header
          * @param header header
+         * @return Builder
          */
         public Builder header(Header header) {
             if (null == this.header) {
@@ -259,6 +269,7 @@ public class MimeRequest {
         /**
          * 设置字符串请求体
          * @param body 字符串请求体
+         * @return Builder
          */
         public Builder body(String body) {
             this.string = body;
@@ -269,6 +280,7 @@ public class MimeRequest {
          * 设置键值对请求体
          * @param key 键
          * @param value 值
+         * @return Builder
          */
         public Builder body(String key, Object value) {
             if (null == parameter) {
@@ -284,6 +296,7 @@ public class MimeRequest {
         /**
          * 设置键值对请求体
          * @param parameter 键值对
+         * @return Builder
          */
         public Builder body(Parameter parameter) {
             if (null == this.parameter) {
@@ -299,6 +312,7 @@ public class MimeRequest {
         /**
          * 额外需要的内容
          * @param extra extra
+         * @return Builder
          */
         public Builder extra(String extra) {
             this.extra = extra;

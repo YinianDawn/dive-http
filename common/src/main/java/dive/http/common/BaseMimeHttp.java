@@ -17,6 +17,7 @@ public abstract class BaseMimeHttp implements MimeHttp {
     /**
      * 更改错误处理方法
      * @param error 错误消费者
+     * @return 本实例
      */
     public BaseMimeHttp error(Consumer<String> error) {
         if (null != error) {

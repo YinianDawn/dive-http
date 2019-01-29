@@ -36,6 +36,8 @@ public interface MimeHttp {
      * 执行请求
      * @param request MimeRequest请求对象
      * @param change 将字符串转变为想要对象的函数
+     * @param detail 回调
+     * @param <R> 转换对象类型
      * @return 转换后的实例对象
      */
     default <R> R execute(MimeRequest request, Function<String, R> change, Detail detail) {
@@ -53,6 +55,7 @@ public interface MimeHttp {
      * @param change 将字符串转变为想要对象的函数
      * @param clazz 结果对象的类型
      * @param detail 更加详细的处理
+     * @param <R> 转换对象类型
      * @return 转换后的实例对象
      */
     default <R> R execute(MimeRequest request, BiFunction<String, Class, R> change,
@@ -70,6 +73,7 @@ public interface MimeHttp {
      * @param request MimeRequest请求对象
      * @param change 将字符串转变为想要对象的函数
      * @param clazz 结果对象的类型
+     * @param <R> 转换对象类型
      * @return 转换后的实例对象
      */
     default <R> R execute(MimeRequest request,
