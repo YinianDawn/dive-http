@@ -1,0 +1,49 @@
+
+dependencies {
+    compile 'dive:http-common:0.0.1'
+    compile 'org.springframework:spring-webmvc:5.1.0.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:2.0.1.RELEASE'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'http-spring'
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'http spring'
+                description = 'http spring'
+                url = 'https://maven.yinian.tech/public'
+                licenses {
+                    license {
+                        name = 'GNU GENERAL PUBLIC LICENSE, Version 3'
+                        url = 'https://www.gnu.org/licenses/gpl-3.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'dawn'
+                        name = 'dawn'
+                        email = 'dawn@yinian.tech'
+                    }
+                }
+                scm {
+                    connection = 'https://github.com/YinianDawn/dive-http.git'
+                    url = 'https://github.com/YinianDawn/dive-http'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = "$buildDir/repo"
+        }
+    }
+}
+
+task copyDocs(type: Copy) {
+    from './build/docs/javadoc/'
+    into "./build/repo/dive/http-spring/$version/javadoc"
+}
