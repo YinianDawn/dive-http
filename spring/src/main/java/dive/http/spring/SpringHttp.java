@@ -24,6 +24,7 @@ import java.util.Objects;
 
 /**
  * 利用Spring的RestTemplate实现
+ * @author dawn
  */
 public class SpringHttp extends BaseMimeHttp {
 
