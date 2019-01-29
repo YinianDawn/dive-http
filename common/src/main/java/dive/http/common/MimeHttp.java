@@ -12,7 +12,6 @@ import java.util.function.Function;
 /**
  * 执行请求接口
  * @author dawn
- * @date 2019/01/27 13:18
  */
 public interface MimeHttp {
 

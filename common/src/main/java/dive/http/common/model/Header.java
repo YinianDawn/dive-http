@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 /**
  * http请求头
  * @author dawn
- * @date 2019/01/27 13:18
  */
 public class Header extends HashMap<String, List<String>> implements Serializable {
 

@@ -11,7 +11,6 @@ import java.util.Map;
 /**
  * 请求对象，封装请求数据
  * @author dawn
- * @date 2019/01/27 13:18
  */
 public class MimeRequest {
 

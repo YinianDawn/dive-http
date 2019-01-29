@@ -7,7 +7,6 @@ import java.util.function.Function;
 /**
  * 请求参数
  * @author dawn
- * @date 2019/01/27 13:18
  */
 public class Parameter extends LinkedHashMap<String, Object> implements Serializable {
 

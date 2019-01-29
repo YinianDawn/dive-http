@@ -6,7 +6,6 @@ import java.util.Map;
 /**
  * 字符串键值对
  * @author dawn
- * @date 2019/01/27 13:18
  */
 public class Pair implements Map.Entry<String, String>, Serializable {
 

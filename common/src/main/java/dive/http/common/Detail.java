@@ -7,7 +7,6 @@ import dive.http.common.model.Method;
 /**
  * 若请求需要获取更多信息，则传入该函数接口
  * @author dawn
- * @date 2019/01/27 13:18
  */
 @FunctionalInterface
 public interface Detail {

@@ -6,7 +6,6 @@ import java.util.function.Consumer;
  * 统一错误输出
  *
  * @author dawn
- * @date 2019/1/29 0:35
  */
 public abstract class BaseMimeHttp implements MimeHttp {
 
