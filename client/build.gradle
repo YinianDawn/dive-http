@@ -1,19 +1,20 @@
 
 dependencies {
     compile 'dive:http-common:0.0.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5.6'
     testCompile 'org.springframework.boot:spring-boot-starter-test:2.0.1.RELEASE'
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'http-mime'
+            artifactId = 'http-client'
             from components.java
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'http mime'
-                description = 'http mime'
+                name = 'http client'
+                description = 'http client'
                 url = 'https://maven.yinian.tech/public'
                 licenses {
                     license {
@@ -44,5 +45,5 @@ publishing {
 
 task copyDocs(type: Copy) {
     from './build/docs/javadoc/'
-    into "./build/repo/dive/http-mime/$version/javadoc"
+    into "./build/repo/dive/http-client/$version/javadoc"
 }
