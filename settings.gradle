@@ -2,7 +2,7 @@ rootProject.name = 'dive-http'
 
 // http请求
 include ':common'      // 公用类
+include ':mime'        // 封装java原生
+include ':client'      // 封装HttpClient
 include ':spring'      // 封装spring
 include ':okhttp'      // 封装okhttp
-include ':client'      // 封装HttpClient
-include ':mime'        // 封装java原生
