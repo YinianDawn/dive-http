@@ -194,7 +194,13 @@ public class MimeRequest {
             }
             switch (method) {
                 case GET:       this.method = Method.GET;       break;
-                case POST:      this.method = Method.POST;      break;
+                case POST:
+                    this.method = Method.POST;
+                    //post请求必须有请求体
+                    if (null == string && null == parameter) {
+                        string = "";
+                    }
+                    break;
                 case PUT:       this.method = Method.PUT;       break;
                 case DELETE:    this.method = Method.DELETE;    break;
                 default:
