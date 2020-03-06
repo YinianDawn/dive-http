@@ -14,6 +14,7 @@ import java.net.ConnectException;
 import java.net.Proxy;
 import java.net.SocketTimeoutException;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Okhttp实现
@@ -27,7 +28,7 @@ public class OkHttp extends BaseMimeHttp {
     /**
      * Okhttp实例
      */
-    private static OkHttpClient client;
+    private OkHttpClient client;
 
     /**
      * 构造器
@@ -44,6 +45,16 @@ public class OkHttp extends BaseMimeHttp {
      */
     public OkHttp(Proxy proxy) {
         client = new OkHttpClient.Builder().proxy(proxy).build();
+    }
+
+    /**
+     * 构造器
+     */
+    public OkHttp(long connect, int read) {
+        client = new OkHttpClient.Builder()       
+            .connectTimeout(connect, TimeUnit.SECONDS) //设置连接超时时间
+            .readTimeout(read, TimeUnit.SECONDS) //设置读取超时时间
+            .build();
     }
 
     /**
