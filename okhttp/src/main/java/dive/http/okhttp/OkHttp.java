@@ -49,11 +49,13 @@ public class OkHttp extends BaseMimeHttp {
 
     /**
      * 构造器
+     * @param connect 设置连接超时时间
+     * @param read 设置读取超时时间
      */
     public OkHttp(long connect, int read) {
         client = new OkHttpClient.Builder()       
-            .connectTimeout(connect, TimeUnit.SECONDS) //设置连接超时时间
-            .readTimeout(read, TimeUnit.SECONDS) //设置读取超时时间
+            .connectTimeout(connect, TimeUnit.SECONDS)
+            .readTimeout(read, TimeUnit.SECONDS)
             .build();
     }
 
